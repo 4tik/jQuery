@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery ID,Class & Other Selector</title>
+  </head>
+  <body>
+    <h1>
+      jQuery Selector Introduction
+      <hr />
+    </h1>
+    <h2 id="head">This is a heading (hide using by ID)</h2>
+    <p class="text">This is a line of text (hide using by class)</p>
+    <p>This is another line of text</p>
+
+    <button>Hide (Selector)</button>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $("button").click(function () {
+      //h2 text hide ussing ID
+      //$("#head").hide();
+
+      //p text hide using CLASS
+      //$(".text").hide();
+
+      //hide all tag information
+      $("*").hide();
+    });
+  });
+</script>

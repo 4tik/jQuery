@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>jQuery Fade In-Out</title>
+
+    <style>
+      #panel,
+      #panel-up {
+        padding: 5px;
+        text-align: center;
+        background-color: yellow;
+        border: solid 1px black;
+        margin-top: 5px;
+      }
+
+      #panel {
+        padding: 60px;
+        display: none;
+      }
+      button {
+        padding: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Slide
+      <hr />
+    </h1>
+
+    <button id="topbar">Slide Down Panel</button>
+    <button id="slide-down">Slide Up Panel</button>
+    <button id="slide-toggle">Slide Toggle</button>
+    <div id="panel">This is a Panel with sample content</div>
+    <div id="panel-up" style="padding: 50px">
+      This is a Panel will be up with sample content
+    </div>
+
+    <div id="panel-toggle" style="padding: 50px; background-color: aquamarine">
+      This is a Panel will be up with sample content
+    </div>
+  </body>
+</html>

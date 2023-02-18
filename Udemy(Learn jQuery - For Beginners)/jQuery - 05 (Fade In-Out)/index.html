@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>jQuery Fade In-Out</title>
+
+    <style>
+      .box {
+        width: 160px;
+        height: 160px;
+        display: none;
+        background-color: red;
+      }
+      .box-fadeTo {
+        width: 160px;
+        height: 160px;
+        background-color: green;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Fade In-Out
+      <hr />
+    </h1>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut" style="display: none">Fade Out</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <br />
+    <br />
+    <div id="div1" class="box"></div>
+    <div id="div2" class="box"></div>
+    <div id="div3" class="box"></div>
+    <div id="div4" class="box"></div>
+
+    <h1>
+      jQuery Fade In-Out
+      <hr />
+    </h1>
+    <button id="fadeTo">Fade To</button>
+    <br />
+    <br />
+    <div id="div11" class="box-fadeTo"></div>
+    <div id="div12" class="box-fadeTo"></div>
+    <div id="div13" class="box-fadeTo"></div>
+    <div id="div14" class="box-fadeTo"></div>
+  </body>
+</html>

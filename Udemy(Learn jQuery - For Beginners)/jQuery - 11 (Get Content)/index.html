@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>jQuery Get Content</title>
+
+    <style>
+      button,
+      input {
+        padding: 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      div {
+        border: 1px solid;
+        width: 500px;
+        height: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #dddddd61;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Get Content
+      <hr />
+    </h1>
+    <button id="show-text">Show Text</button>
+    <button id="show-html">Show HTML</button>
+    <button id="show-attr">Show Attributes</button>
+    <button id="change-attr">Change Attributes</button>
+    <p id="get-content">This is a <i>sample</i> line of <b>text</b></p>
+    <a
+      href="https://www.google.com/"
+      id="get-attr"
+      style="text-decoration: none; padding: 10px; border: solid 1px"
+      >Attributes</a
+    >
+    <br />
+    <br />
+    <label
+      >Enter Name : <input value="Atikur Rahman" id="get-name" />
+      <button id="get-value">Get Value</button></label
+    >
+    <br />
+    <br />
+    <div id="output"></div>
+  </body>
+</html>
