@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Selectors, filters and contents</title>
+
+    <style>
+      button {
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: green;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Selectors, filters and contents
+      <hr />
+    </h1>
+    <h2>I love jQuery 01</h2>
+    <h2>I love jQuery 02</h2>
+    <h2>I love jQuery 03</h2>
+
+    <button>Replace</button>
+    <div>
+      Integer et lacus malesuada, dignissim ipsum at, finibus leo. In mattis at
+      sem vitae malesuada. Vivamus id purus elit. Phasellus ut neque purus.
+      Praesent euismod dictum semper. Donec hendrerit viverra dui non egestas.
+      Sed scelerisque risus urna, id molestie neque consectetur nec. Nullam
+      rutrum dolor convallis augue euismod, sit amet rhoncus nibh semper.
+      Curabitur sit amet magna ac metus consequat eleifend eget ac orci. Quisque
+      ut lacus libero.
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $("h2").css("border", "2px solid red"); //using selectors
+    $("h2:first").css("border", "3px solid green"); //using selector with filters
+
+    //replacing  contents
+    $("button").click(function () {
+      var newText = $("<p>");
+      newText.append("This is replacing text by clicking");
+      $("div").html(newText);
+    });
+  });
+</script>

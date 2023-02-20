@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Events</title>
+
+    <script>
+      $(document).ready(function () {
+        $("div > p").css("border", "2px solid red");
+        $("div > p.fourth-para").css("border", "2px solid blue");
+      });
+    </script>
+    <style>
+      button {
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: purple;
+        color: #fff;
+        border: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Events
+      <hr />
+    </h1>
+    <p>
+      01 Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever
+      since the 1500s,
+    </p>
+
+    <p>
+      02 Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever
+      since the 1500s,
+    </p>
+
+    <div>
+      <p>
+        001 <br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <p>
+        002 <br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <p>
+        003<br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <p class="fourth-para">
+        004<br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+    </div>
+
+    <ul>
+      <li>Home 01</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Events</title>
+
+    <style>
+      button,
+      div {
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: purple;
+        color: #fff;
+        border: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Events
+      <hr />
+    </h1>
+    <div id="item-div">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s,
+    </div>
+    <br />
+    <hr />
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <div id="show-hide">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s,
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    //mouse click
+    $("#item-div").click(function () {
+      $("#item-div").html("<p>You Click Me!</p>");
+    });
+
+    //mouse leave
+    $("#item-div").mouseleave(function () {
+      $("#item-div").html("<p>You leave me alone!</p>");
+    });
+
+    //mouse enter
+    $("#item-div").mouseenter(function () {
+      $("#item-div").html("<p>You touch me!</p>");
+    });
+
+    //hide content
+    $("#hide").click(function () {
+      $("#show-hide").hide(800);
+    });
+
+    //show content
+    $("#show").click(function () {
+      $("#show-hide").show(800);
+    });
+
+    //show hide content using toggle
+    $("#toggle").click(function () {
+      $("#show-hide").toggle(800);
+    });
+  });
+</script>

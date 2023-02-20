@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Content</title>
+
+    <script>
+      $(document).ready(function () {
+        $("#create-text").click(function () {
+          $("div >p:last").text("replace previouss text.");
+        });
+
+        $("#remove").click(function () {
+          $("div > p:last").remove();
+        });
+
+        $("#create").click(function () {
+          $("div").append("<p>append text</p>");
+        });
+      });
+    </script>
+    <style>
+      button,
+      a {
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: purple;
+        color: #fff;
+        border: 0px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Content
+      <hr />
+    </h1>
+
+    <a id="create" href="Javascript:void(0)">Create</a>
+    <a id="create-text" href="Javascript:void(0)">Create Text</a>
+    <a id="remove" href="Javascript:void(0)">Remove</a>
+
+    <br />
+    <div>
+      <p>
+        001 <br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <p>
+        002 <br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <p>
+        003<br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <p class="fourth-para">
+        004<br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+    </div>
+
+    <ul>
+      <li>Home 01</li>
+    </ul>
+  </body>
+</html>
