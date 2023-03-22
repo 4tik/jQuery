@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Selector</title>
+  </head>
+  <body>
+    <h1>
+      jQuery Selector
+      <hr />
+    </h1>
+    <strong># ID Selector</strong>
+    <h2 id="text01">This text hide on click using ID</h2>
+    <button id="id-button">Hide Text by ID</button>
+    <br />
+    <br />
+    <strong># Class Selector</strong>
+    <h2 class="text02">This text hide on click using Class</h2>
+    <button class="class-button">Hide Text by Class</button>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $("#id-button").click(function () {
+      $("#text01").toggle();
+    });
+
+    $(".class-button").click(function () {
+      $(".text02").toggle();
+    });
+  });
+</script>

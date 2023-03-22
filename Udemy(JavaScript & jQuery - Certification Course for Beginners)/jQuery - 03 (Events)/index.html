@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Events</title>
+    <style>
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: brown;
+        color: #fff;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Events
+      <hr />
+      <strong>Click to Hide</strong>
+      <p>Double Click to Hide</p>
+    </h1>
+    <button id="mouse01">Mouse Leave</button>
+    <button id="mouse02">Mouse Multiple Events</button>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $("strong").click(function () {
+      $("strong").hide();
+    });
+
+    $("p").dblclick(function () {
+      $("p").hide();
+    });
+
+    $("#mouse01").mouseenter(function () {
+      $("#mouse01").text("On Mouse Enter");
+    });
+
+    $("#mouse01").mouseleave(function () {
+      $("#mouse01").text("On Mouse Leave");
+    });
+
+    $("#mouse02").on({
+      mouseenter: function () {
+        $(this).css("background-color", "red");
+      },
+      mouseleave: function () {
+        $(this).css("background-color", "green");
+      },
+      click: function () {
+        $(this).css("background-color", "blue");
+      },
+    });
+  });
+</script>

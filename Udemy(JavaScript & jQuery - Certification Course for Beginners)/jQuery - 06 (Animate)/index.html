@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Animate</title>
+    <style>
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        margin-bottom: 10px;
+      }
+      .box {
+        width: 160px;
+        height: 160px;
+        background-color: green;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      jQuery Animate
+      <hr />
+    </h1>
+    <button id="button1">Animate Display</button>
+    <button id="button2">Animate with opacity</button>
+    <button id="button3">Animate Queue Functionality</button>
+    <button id="button4" style="background-color: red">Stop Animation</button>
+    <button id="button5">Changing</button>
+    <div class="box" id="animate"></div>
+    <div class="box" id="animate-m"></div>
+    <div class="box" id="animate-q"></div>
+    <div class="box" id="animate-all"></div>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $("#button1").click(function () {
+      $("#animate").animate({ left: "600px" }, 1000);
+    });
+
+    $("#button2").click(function () {
+      $("#animate-m").animate(
+        { left: "800px", opacity: 0.25, height: "toggle" },
+        1000
+      );
+    });
+
+    $("#button3").click(function () {
+      let divBox = $("#animate-q");
+      divBox.animate({ height: "500px", opacity: 0.5 }, 1000);
+      divBox.animate({ width: "500px", opacity: 0.9 }, 1000);
+      divBox.animate({ height: "200px", opacity: 0.5 }, 1000);
+      divBox.animate({ width: "200px", opacity: 0.9 }, 1000);
+    });
+
+    $("#button4").click(function () {
+      $(".box").stop();
+    });
+
+    $("#button5").click(function () {
+      $("#animate-all")
+        .slideUp(1000)
+        .slideDown(1000)
+        .css("background-color", "red");
+    });
+  });
+</script>
